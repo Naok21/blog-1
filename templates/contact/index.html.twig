@@ -9,15 +9,15 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Bienvenue sur la page de contact !</h1>
 
     <header>
-    Les pages du site :
-    <ul>
-        <li><a href=" {{ path('accueil') }}">Accueil</a></li>
-        <li><a href=" {{ path('contact') }}">Contact</a></li>
-        <li><a href=" {{ path('blog') }}">Blog</a></li>
-    </ul>
+        Les pages du site :
+        <ul>
+            <li><a href=" {{ path('accueil') }}">Accueil</a></li>
+            <li><a href=" {{ path('contact', {type : 'Montpellier', name : 'Nassim'}) }}">Contact</a></li>
+            <li><a href=" {{ path('blog') }}">Blog</a></li>
+        </ul>
     </header>
 
     {% if name is defined %}

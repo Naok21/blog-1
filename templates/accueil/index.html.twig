@@ -9,12 +9,16 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Bienvenue sur la page d'accueil !</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/MAMP/blog-1/src/Controller/AccueilController.php'|file_link(0) }}">src/Controller/AccueilController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/MAMP/blog-1/templates/accueil/index.html.twig'|file_link(0) }}">templates/accueil/index.html.twig</a></code></li>
-    </ul>
+    <header>
+        Les pages du site :
+        <ul>
+            <li><a href=" {{ path('accueil') }}">Accueil</a></li>
+            <li><a href=" {{ path('contact', {type : 'Montpellier', name : 'Nassim'}) }}">Contact</a></li>
+            <li><a href=" {{ path('blog') }}">Blog</a></li>
+        </ul>
+    </header>
+
 </div>
 {% endblock %}
