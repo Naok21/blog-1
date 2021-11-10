@@ -11,14 +11,17 @@
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
+    <header>
+    Les pages du site :
     <ul>
-        <li>Your controller at <code><a href="{{ 'C:/MAMP/blog-1/src/Controller/ContactController.php'|file_link(0) }}">src/Controller/ContactController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/MAMP/blog-1/templates/contact/index.html.twig'|file_link(0) }}">templates/contact/index.html.twig</a></code></li>
+        <li><a href=" {{ path('accueil') }}">Accueil</a></li>
+        <li><a href=" {{ path('contact') }}">Contact</a></li>
+        <li><a href=" {{ path('blog') }}">Blog</a></li>
     </ul>
+    </header>
 
     {% if name is defined %}
-        <p> Ton prénom est : {{name}}</p>
+        <p> Salut {{name}}</p>
     {% endif %}
 
     {% if type is defined %}
